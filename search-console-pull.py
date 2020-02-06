@@ -1,7 +1,7 @@
 from googleapiclient import sample_tools
 import csv
 
-def main(property_uri, start_date, end_date):
+def get_gsc_data(property_uri, start_date, end_date):
   service, flags = sample_tools.init([property_uri], 'webmasters', 'v3', __doc__, __file__, scope='https://www.googleapis.com/auth/webmasters.readonly')
 
   request = {
@@ -16,7 +16,7 @@ def main(property_uri, start_date, end_date):
   for row in response['rows']: 
     print(row['keys'], row['clicks'], row['impressions'], row['ctr'], row['position'])
 
-main('https://www.basicbilliards.com/','2020-01-01','2020-01-01')
+get_gsc_data('https://www.basicbilliards.com/','2020-01-01','2020-01-01')
 
 
 
