@@ -1,5 +1,4 @@
 from googleapiclient import sample_tools
-import csv
 
 def get_gsc_data(property_uri, start_date, end_date):
   service, flags = sample_tools.init([property_uri], 'webmasters', 'v3', __doc__, __file__, scope='https://www.googleapis.com/auth/webmasters.readonly')
