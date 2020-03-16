@@ -16,7 +16,11 @@ def get_gsc_data(property_uri, start_date, end_date):
   for row in response['rows']: 
     print(row['keys'], row['clicks'], row['impressions'], row['ctr'], row['position'])
 
-get_gsc_data('https://www.basicbilliards.com/','2020-01-01','2020-01-01')
+    
+gsc_property = "INSERT YOUR WEBSITE HERE"
+gsc_start_date = "2020-01-01"
+gsc_end_date = "2020-01-01"
+get_gsc_data(gsc_property, gsc_start_date, gsc_end_date)
 
 
 
